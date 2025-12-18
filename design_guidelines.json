@@ -1,0 +1,151 @@
+{
+  "project_name": "Life RPG",
+  "design_philosophy": {
+    "persona": "E1: The Anti-AI Designer",
+    "core_concept": "The Abyssal Archive - A dark, immersive interface where productivity is magic and tasks are monsters.",
+    "principles": [
+      "Fusion: Diablo IV UI meets Minimalist SaaS.",
+      "Emotion: Every completion feels like a loot drop.",
+      "Texture: No flat colors. Use grain, stone, and parchment textures.",
+      "Lighting: UI elements should glow, shimmer, or cast shadows."
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "palette": {
+      "background": {
+        "base": "#0a0a0a",
+        "surface": "#1c1917",
+        "overlay": "#292524"
+      },
+      "primary": {
+        "name": "Gold (XP/Reward)",
+        "hex": "#fbbf24",
+        "glow": "0 0 20px rgba(251, 191, 36, 0.5)"
+      },
+      "secondary": {
+        "name": "Void Purple (Mana/Magic)",
+        "hex": "#a855f7",
+        "glow": "0 0 20px rgba(168, 85, 247, 0.5)"
+      },
+      "accent": {
+        "name": "Blood Red (Health/Boss)",
+        "hex": "#ef4444",
+        "glow": "0 0 20px rgba(239, 68, 68, 0.5)"
+      },
+      "text": {
+        "primary": "#fafaf9",
+        "secondary": "#a8a29e",
+        "muted": "#57534e"
+      }
+    },
+    "typography": {
+      "headings": {
+        "font_family": "Cinzel, serif",
+        "usage": "Page titles, Quest names, Boss names",
+        "weights": ["700", "900"]
+      },
+      "body": {
+        "font_family": "Inter, sans-serif",
+        "usage": "Descriptions, UI text, Stats",
+        "weights": ["400", "500"]
+      },
+      "mono": {
+        "font_family": "JetBrains Mono, monospace",
+        "usage": "XP values, Level numbers, Timers"
+      }
+    }
+  },
+  "ui_rules": {
+    "containers": {
+      "card_style": "bg-[#1c1917] border border-[#44403c] shadow-xl relative overflow-hidden group hover:border-[#fbbf24]/50 transition-all duration-300",
+      "glass_panel": "bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl",
+      "quest_item": "relative pl-6 border-l-2 border-[#44403c] hover:border-[#fbbf24] transition-colors bg-gradient-to-r from-transparent to-black/20"
+    },
+    "borders": {
+      "gothic": "border-2 border-double border-[#57534e]",
+      "rune_glow": "ring-1 ring-[#fbbf24]/20 shadow-[0_0_15px_rgba(251,191,36,0.1)]"
+    },
+    "effects": {
+      "text_glow": "drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]",
+      "hover_lift": "hover:-translate-y-1 hover:shadow-lg transition-transform"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#fbbf24] text-black font-bold uppercase tracking-widest hover:bg-[#f59e0b] shadow-[0_0_15px_rgba(251,191,36,0.4)] rounded-sm px-8 py-3 font-cinzel",
+      "secondary": "bg-transparent border border-[#57534e] text-[#a8a29e] hover:text-white hover:border-white uppercase tracking-widest rounded-sm px-8 py-3 font-cinzel",
+      "danger": "bg-[#ef4444]/10 border border-[#ef4444]/50 text-[#ef4444] hover:bg-[#ef4444] hover:text-white transition-all uppercase tracking-widest rounded-sm px-8 py-3 font-cinzel"
+    },
+    "inputs": {
+      "style": "bg-[#0c0a09] border border-[#292524] text-[#fafaf9] focus:border-[#fbbf24] focus:ring-1 focus:ring-[#fbbf24] rounded-sm h-12 px-4 font-inter"
+    },
+    "navigation": {
+      "style": "fixed bottom-0 left-0 right-0 md:top-0 md:bottom-auto bg-black/80 backdrop-blur-md border-t md:border-b border-white/10 z-50 h-16 flex items-center justify-center md:justify-between px-6"
+    }
+  },
+  "assets": {
+    "images": {
+      "avatars": [
+        {
+          "url": "https://images.unsplash.com/photo-1750092701416-174aaa737e55",
+          "category": "warrior",
+          "description": "Warrior with axe in forest"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1743951896798-2936f661f939",
+          "category": "mage",
+          "description": "Wandering monk/mage figure"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1693921978742-c93c4a3e6172",
+          "category": "noble",
+          "description": "Noble in green and gold"
+        }
+      ],
+      "textures": [
+        {
+          "url": "https://images.unsplash.com/photo-1690823874730-f55a1673ece2",
+          "category": "background",
+          "description": "Dark black rock surface for card backgrounds"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1714951384509-dbb8017a89d7",
+          "category": "texture",
+          "description": "Rough stone wall texture"
+        }
+      ],
+      "items": [
+        {
+          "url": "https://images.unsplash.com/photo-1754300681919-a74e9839bc9c",
+          "category": "reward",
+          "description": "Gold chess pieces representing strategy and wealth"
+        }
+      ]
+    },
+    "icons": {
+      "library": "lucide-react",
+      "recommendations": {
+        "quests": "Sword, Scroll, Shield, Map",
+        "stats": "BarChart, Activity, Zap",
+        "profile": "User, Crown, Skull",
+        "settings": "Settings, Cog, Hammer"
+      }
+    }
+  },
+  "layout_strategy": {
+    "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6 p-6 md:p-12 max-w-7xl mx-auto",
+    "quest_board": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+    "hero_section": "min-h-[80vh] flex flex-col justify-center items-center text-center relative overflow-hidden"
+  },
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds unless it's a subtle noise overlay.",
+    "Always use 'Cinzel' font for headings to maintain the RPG aesthetic.",
+    "Use 'sonner' for toast notifications.",
+    "Ensure all interactive elements have hover states that increase brightness or add a glow.",
+    "Use 'data-testid' for all interactive elements.",
+    "Avoid pure black (#000000) for backgrounds; use #0a0a0a or #0c0a09 for depth.",
+    "Images must be treated with a slight desaturation or sepia filter to match the dark theme unless they are 'magical' items."
+  ],
+  "instructions_to_main_agent": "You are building 'Life RPG'. Use the provided colors and fonts to override the default Tailwind config. Create a 'Layout' component that wraps the app with the dark background and font settings. Use the provided image URLs for the avatar selection and dashboard backgrounds. Implement the 'Quest Card' with the specified border and hover effects."
+}
