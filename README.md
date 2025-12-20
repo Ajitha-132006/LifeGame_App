@@ -1,6 +1,7 @@
 **🎮 Life RPG App**
 
 Life RPG is a full-stack web application that gamifies real life by turning daily activities into quests. Users can register, log in, complete quests, earn XP, level up, maintain streaks, and track progress — like a real RPG, but for life.
+AI integration is not completly done yet.
 
 **🧠 Features**
 
