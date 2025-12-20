@@ -1,414 +1,206 @@
-# 🎮 Life RPG App
+**🎮 Life RPG App**
 
-# 
+Life RPG is a full-stack web application that gamifies real life by turning daily activities into quests. Users can register, log in, complete quests, earn XP, level up, maintain streaks, and track progress — like a real RPG, but for life.
 
-# Life RPG is a full-stack web application that gamifies real life by turning daily activities into quests. Users can register, log in, complete quests, earn XP, level up, maintain streaks, and track progress — like a real RPG, but for life.
+**🧠 Features**
 
-# 
+User authentication (JWT-based)
 
-# 🧠 Features
+Quest creation & completion
 
-# 
+XP, levels, gold, streaks
 
-# User authentication (JWT-based)
+Profile & avatar system
 
-# 
+Leaderboard
 
-# Quest creation \& completion
+Friends system
 
-# 
+Shop items
 
-# XP, levels, gold, streaks
+Photo & quiz-based quest verification
 
-# 
+Responsive RPG-style UI
 
-# Profile \& avatar system
+**🛠 Tech Stack**
+Frontend
 
-# 
+React (CRA + CRACO)
 
-# Leaderboard
+JavaScript
 
-# 
+Axios (API calls)
 
-# Friends system
+React Router
 
-# 
+CSS / UI components
 
-# Shop items
+Backend
 
-# 
+FastAPI (Python)
 
-# Photo \& quiz-based quest verification
+JWT Authentication
 
-# 
+Pydantic models
 
-# Responsive RPG-style UI
+Uvicorn ASGI server
 
-# 
+Database
 
-# 🛠 Tech Stack
+MongoDB
 
-# Frontend
+Motor (async MongoDB driver)
 
-# 
+Tools & Environment
 
-# React (CRA + CRACO)
+Node.js
 
-# 
+npm
 
-# JavaScript
+Python venv
 
-# 
+MongoDB (local)
 
-# Axios (API calls)
+Git & GitHub
 
-# 
+**📁 Project Structure**
+life_rpg_app/
+│
+├── backend/
+│   ├── server.py
+│   ├── requirements.txt
+│   ├── .env
+│   └── venv/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── craco.config.js
+│
+└── README.md
 
-# React Router
+**⚙️ Prerequisites (Install These First)**
+1️⃣ Node.js
 
-# 
+Recommended: Node 18 LTS
 
-# CSS / UI components
+node -v
+npm -v
 
-# 
+2️⃣ Python
 
-# Backend
+Recommended: Python 3.11 / 3.12
 
-# 
+python --version
 
-# FastAPI (Python)
+3️⃣ MongoDB
 
-# 
+Install MongoDB Community Server
 
-# JWT Authentication
+Ensure MongoDB service is running
 
-# 
+Check:
 
-# Pydantic models
+mongod
 
-# 
 
-# Uvicorn ASGI server
+or
 
-# 
+mongo
 
-# Database
+**🔐 Environment Variables**
 
-# 
+Create a .env file inside backend/:
 
-# MongoDB
+MONGO_URL=mongodb://localhost:27017
+DB_NAME=life_rpg
+JWT_SECRET=your-secret-key
+CORS_ORIGINS=http://localhost:3000
 
-# 
+**🚀 How to Run the Application (Step-by-Step)**
+🔹 Step 1: Start MongoDB
 
-# Motor (async MongoDB driver)
+MongoDB must be running before backend starts.
 
-# 
+🔹 Step 2: Backend Setup
+cd backend
+python -m venv venv
+venv\Scripts\activate   # Windows
 
-# Tools \& Environment
 
-# 
+Install dependencies:
 
-# Node.js
+pip install -r requirements.txt
 
-# 
 
-# npm
+Run backend:
 
-# 
+python -m uvicorn server:app --reload
 
-# Python venv
 
-# 
+Backend runs at:
 
-# MongoDB (local)
+http://127.0.0.1:8000
 
-# 
 
-# Git \& GitHub
+API docs:
 
-# 
+http://127.0.0.1:8000/docs
 
-# 📁 Project Structure
+🔹 Step 3: Frontend Setup
+cd frontend
+npm install --legacy-peer-deps
 
-# life\_rpg\_app/
 
-# │
+Run frontend:
 
-# ├── backend/
+npm start
 
-# │   ├── server.py
 
-# │   ├── requirements.txt
+Frontend runs at:
 
-# │   ├── .env
+http://localhost:3000
 
-# │   └── venv/
+**🔄 How the App Works (Flow)**
+React Frontend (3000)
+        ↓
+FastAPI Backend (8000)
+        ↓
+MongoDB (27017)
 
-# │
 
-# ├── frontend/
+Frontend sends API requests
 
-# │   ├── src/
+Backend handles auth, logic, DB
 
-# │   ├── public/
+MongoDB stores users, quests, progress
 
-# │   ├── package.json
+**⚠️ Common Notes**
 
-# │   └── craco.config.js
+MongoDB must be running every time the app is used
 
-# │
+React hook warnings can be ignored for now
 
-# └── README.md
+npm audit warnings are common in CRA projects
 
-# 
+Backend will throw errors if MongoDB is offline
 
-# ⚙️ Prerequisites (Install These First)
+**📌 Future Improvements**
 
-# 1️⃣ Node.js
+MongoDB Atlas (cloud DB)
 
-# 
+Docker setup
 
-# Recommended: Node 18 LTS
+Deployment (Vercel + Render)
 
-# 
+Push notifications
 
-# node -v
+Mobile app version
 
-# npm -v
+AI-generated quests (optional)
 
-# 
+**👤 Author**
 
-# 2️⃣ Python
-
-# 
-
-# Recommended: Python 3.11 / 3.12
-
-# 
-
-# python --version
-
-# 
-
-# 3️⃣ MongoDB
-
-# 
-
-# Install MongoDB Community Server
-
-# 
-
-# Ensure MongoDB service is running
-
-# 
-
-# Check:
-
-# 
-
-# mongod
-
-# 
-
-# 
-
-# or
-
-# 
-
-# mongo
-
-# 
-
-# 🔐 Environment Variables
-
-# 
-
-# Create a .env file inside backend/:
-
-# 
-
-# MONGO\_URL=mongodb://localhost:27017
-
-# DB\_NAME=life\_rpg
-
-# JWT\_SECRET=your-secret-key
-
-# CORS\_ORIGINS=http://localhost:3000
-
-# 
-
-# 🚀 How to Run the Application (Step-by-Step)
-
-# 🔹 Step 1: Start MongoDB
-
-# 
-
-# MongoDB must be running before backend starts.
-
-# 
-
-# 🔹 Step 2: Backend Setup
-
-# cd backend
-
-# python -m venv venv
-
-# venv\\Scripts\\activate   # Windows
-
-# 
-
-# 
-
-# Install dependencies:
-
-# 
-
-# pip install -r requirements.txt
-
-# 
-
-# 
-
-# Run backend:
-
-# 
-
-# python -m uvicorn server:app --reload
-
-# 
-
-# 
-
-# Backend runs at:
-
-# 
-
-# http://127.0.0.1:8000
-
-# 
-
-# 
-
-# API docs:
-
-# 
-
-# http://127.0.0.1:8000/docs
-
-# 
-
-# 🔹 Step 3: Frontend Setup
-
-# cd frontend
-
-# npm install --legacy-peer-deps
-
-# 
-
-# 
-
-# Run frontend:
-
-# 
-
-# npm start
-
-# 
-
-# 
-
-# Frontend runs at:
-
-# 
-
-# http://localhost:3000
-
-# 
-
-# 🔄 How the App Works (Flow)
-
-# React Frontend (3000)
-
-# &nbsp;       ↓
-
-# FastAPI Backend (8000)
-
-# &nbsp;       ↓
-
-# MongoDB (27017)
-
-# 
-
-# 
-
-# Frontend sends API requests
-
-# 
-
-# Backend handles auth, logic, DB
-
-# 
-
-# MongoDB stores users, quests, progress
-
-# 
-
-# ⚠️ Common Notes
-
-# 
-
-# MongoDB must be running every time the app is used
-
-# 
-
-# React hook warnings can be ignored for now
-
-# 
-
-# npm audit warnings are common in CRA projects
-
-# 
-
-# Backend will throw errors if MongoDB is offline
-
-# 
-
-# 📌 Future Improvements
-
-# 
-
-# MongoDB Atlas (cloud DB)
-
-# 
-
-# Docker setup
-
-# 
-
-# Deployment (Vercel + Render)
-
-# 
-
-# Push notifications
-
-# 
-
-# Mobile app version
-
-# 
-
-# AI-generated quests (optional)
-
-# 
-
-# 👤 Author
-
-# 
-
-# Chalasani Ajitha
-
-# Full-stack developer
-
-# Project built for learning, practice, and CV showcasing.
-
+Chalasani Ajitha
+Project built for learning, practice, and CV showcasing.
